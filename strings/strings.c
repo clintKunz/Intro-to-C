@@ -9,7 +9,15 @@
 */
 int string_length(char *s)
 {
-
+    int counter = 0;
+    int l = *s;
+    for (int i = 0; i < l; i++) {
+        if(s[i] == '\0') {
+            break;
+        }
+        counter ++;
+    }
+    return counter;
 }
 
 /*
@@ -20,14 +28,20 @@ int string_length(char *s)
 */
 char *reverse_string(char *rv, char *s)
 {
+    // int string_length = int string_length(s);
+    int j = 0;
+    for (int i = 10; i > 0; i--) {
+        rv[j] = s[i]; 
+    }
 
+    return rv; 
 }
 
 #ifndef TESTING
 int main(void)
 {
     char quote1[] = "Don't forget to be awesome";
-    char quote2[] = "a man a plan a canal panama";
+    char quote2[] = "hello world";
 
     char rv[512];
 
